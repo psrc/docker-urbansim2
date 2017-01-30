@@ -41,7 +41,7 @@ RUN git config --global user.email "docker@psrc.org" && git config --global user
 
 WORKDIR ${wd}/urbansim_defaults
 RUN git remote add psrcedits https://github.com/hanase/urbansim_defaults.git
-#RUN git pull psrcedits dev  --commented because there is a merge conflict
+RUN git pull psrcedits dev
 
 WORKDIR ${wd}/urbansim
 RUN git remote add psrcedits https://github.com/hanase/urbansim.git
